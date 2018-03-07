@@ -119,3 +119,7 @@ bracketed:
 	| lbracket hardcoded rbracket							{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number in brackets" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	| lbracket expression rbracket							{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression in brackets" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	;
+assignment:
+	name eqs hardcoded										{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing assignemnt" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| name eqs expression									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing assignment" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	;	
