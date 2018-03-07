@@ -11,3 +11,4 @@ extern char *yytext;
 void yyerror(char const *);
 bool PDEBUG = false;
 %}
+%define api.value.type {Compiler::SyntaxTree *}
