@@ -526,8 +526,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "Lex.l"
-#line 3 "Lex.l"
+#line 1 "Scanner and Parser/Lex.l"
+#line 3 "Scanner and Parser/Lex.l"
 #include <iostream>
 #include "y.tab.h"
 bool DEBUG = false;
@@ -749,7 +749,7 @@ YY_DECL
 		}
 
 	{
-#line 16 "Lex.l"
+#line 16 "Scanner and Parser/Lex.l"
 
 #line 755 "lex.yy.c"
 
@@ -811,123 +811,123 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 17 "Lex.l"
+#line 17 "Scanner and Parser/Lex.l"
 { ; }	/* These comment parts will remove comments that are even syntactically incorrect */
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 18 "Lex.l"
+#line 18 "Scanner and Parser/Lex.l"
 { ; }	/* That should mean no run-time errors when compiling code into C++ source code   */
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 19 "Lex.l"
+#line 19 "Scanner and Parser/Lex.l"
 { ; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 20 "Lex.l"
+#line 20 "Scanner and Parser/Lex.l"
 { ; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 21 "Lex.l"
+#line 21 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a start point" << std::endl; return(START); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 22 "Lex.l"
+#line 22 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a declaration" << std::endl; return(NUMBER); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 23 "Lex.l"
+#line 23 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected an end point" << std::endl; return(DONE); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 24 "Lex.l"
+#line 24 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a say" << std::endl; return(SAY); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 25 "Lex.l"
+#line 25 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a hard-coded number" << std::endl; return(HCNUMBER); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 26 "Lex.l"
+#line 26 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a name" << std::endl; return(NAME); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 27 "Lex.l"
+#line 27 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected an equals" << std::endl; return(EQS); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 28 "Lex.l"
+#line 28 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected an addition" << std::endl; return(ADD); }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 29 "Lex.l"
+#line 29 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a subtraction" << std::endl; return(SUB); }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 30 "Lex.l"
+#line 30 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a multiplication" << std::endl; return(MUL); }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 31 "Lex.l"
+#line 31 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a division" << std::endl; return(DIV); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 32 "Lex.l"
+#line 32 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a semicolon" << std::endl; return(SEMI_COLON); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 33 "Lex.l"
+#line 33 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a left bracket" << std::endl; return(LEFT_BRACKET); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 34 "Lex.l"
+#line 34 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a right bracket" << std::endl; return(RIGHT_BRACKET); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 35 "Lex.l"
+#line 35 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a left brace" << std::endl; return(LEFT_BRACE); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 36 "Lex.l"
+#line 36 "Scanner and Parser/Lex.l"
 { if(DEBUG == true)std::cout << "[DEBUG] Scanner detected a right brace" << std::endl; return(RIGHT_BRACE); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 37 "Lex.l"
+#line 37 "Scanner and Parser/Lex.l"
 
 	YY_BREAK
 case 22:
 /* rule 22 can match eol */
 YY_RULE_SETUP
-#line 38 "Lex.l"
+#line 38 "Scanner and Parser/Lex.l"
 ++yylineno;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 39 "Lex.l"
+#line 39 "Scanner and Parser/Lex.l"
 
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 40 "Lex.l"
+#line 40 "Scanner and Parser/Lex.l"
 ECHO;
 	YY_BREAK
 #line 934 "lex.yy.c"
@@ -1931,6 +1931,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 40 "Lex.l"
+#line 40 "Scanner and Parser/Lex.l"
 
 

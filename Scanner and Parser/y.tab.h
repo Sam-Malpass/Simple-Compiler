@@ -40,7 +40,7 @@
 extern int yydebug;
 #endif
 /* "%code requires" blocks.  */
-#line 1 "Grammar.y" /* yacc.c:1909  */
+#line 1 "Scanner and Parser/Grammar.y" /* yacc.c:1909  */
 
 #include "../Syntax Tree/Syntax Tree.hpp"
 

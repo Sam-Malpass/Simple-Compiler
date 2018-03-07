@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 4 "Grammar.y" /* yacc.c:339  */
+#line 4 "Scanner and Parser/Grammar.y" /* yacc.c:339  */
 
 #include <iostream>
 #include <memory>
@@ -103,7 +103,7 @@ bool PDEBUG = false;
 extern int yydebug;
 #endif
 /* "%code requires" blocks.  */
-#line 1 "Grammar.y" /* yacc.c:355  */
+#line 1 "Scanner and Parser/Grammar.y" /* yacc.c:355  */
 
 #include "../Syntax Tree/Syntax Tree.hpp"
 
@@ -1390,523 +1390,523 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 23 "Grammar.y" /* yacc.c:1646  */
+#line 23 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { root.reset(new Compiler::Double((yyvsp[-1]), (yyvsp[0]))); }
 #line 1396 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 25 "Grammar.y" /* yacc.c:1646  */
+#line 25 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { (yyval) = (yyvsp[-1]); }
 #line 1402 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 26 "Grammar.y" /* yacc.c:1646  */
+#line 26 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { (yyval) = nullptr; }
 #line 1408 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 29 "Grammar.y" /* yacc.c:1646  */
+#line 29 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing function" << std::endl; (yyval) = new Compiler::Double((yyvsp[-3]), (yyvsp[-1])); }
 #line 1414 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 30 "Grammar.y" /* yacc.c:1646  */
+#line 30 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { (yyval) = new Compiler::Double((yyvsp[-2]), (yyvsp[-1])); }
 #line 1420 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 31 "Grammar.y" /* yacc.c:1646  */
+#line 31 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { (yyval) = new Compiler::Double((yyvsp[-2]), (yyvsp[0])); }
 #line 1426 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 32 "Grammar.y" /* yacc.c:1646  */
+#line 32 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1432 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 33 "Grammar.y" /* yacc.c:1646  */
+#line 33 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { (yyval) = new Compiler::Double((yyvsp[0]), new Compiler::Empty()); }
 #line 1438 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 36 "Grammar.y" /* yacc.c:1646  */
+#line 36 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing statement" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1444 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 37 "Grammar.y" /* yacc.c:1646  */
+#line 37 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { (yyval) = nullptr; }
 #line 1450 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 40 "Grammar.y" /* yacc.c:1646  */
+#line 40 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing 'DONE'" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1456 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 41 "Grammar.y" /* yacc.c:1646  */
+#line 41 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing declaration" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1462 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 42 "Grammar.y" /* yacc.c:1646  */
+#line 42 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing declartion & assignment" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0]));}
 #line 1468 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 43 "Grammar.y" /* yacc.c:1646  */
+#line 43 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing assignment" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1474 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 44 "Grammar.y" /* yacc.c:1646  */
+#line 44 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1480 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 45 "Grammar.y" /* yacc.c:1646  */
+#line 45 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing output" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1486 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 46 "Grammar.y" /* yacc.c:1646  */
+#line 46 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { std::cout << "[WARNING] SYNTAX ERROR REMOVED" << std::endl; (yyval) = new Compiler::Double(new Compiler::Empty(), new Compiler::Empty()); }
 #line 1492 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 47 "Grammar.y" /* yacc.c:1646  */
-    { std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; (yyval) = new Compiler::Double((yyvsp[0]), new Compiler::StateEnd(";")); }
+#line 47 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
+    { std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; (yyval) = new Compiler::Double((yyvsp[0]), new Compiler::Changed(";")); }
 #line 1498 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 48 "Grammar.y" /* yacc.c:1646  */
-    { std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; (yyval) = new Compiler::Double((yyvsp[0]), new Compiler::StateEnd(";")); }
+#line 48 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
+    { std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; (yyval) = new Compiler::Double((yyvsp[0]), new Compiler::Changed(";")); }
 #line 1504 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 36:
-#line 68 "Grammar.y" /* yacc.c:1646  */
+#line 68 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with number" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1510 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 37:
-#line 69 "Grammar.y" /* yacc.c:1646  */
+#line 69 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with variable" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1516 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 38:
-#line 70 "Grammar.y" /* yacc.c:1646  */
+#line 70 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with expression" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1522 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 39:
-#line 71 "Grammar.y" /* yacc.c:1646  */
+#line 71 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing done alone" << std::endl; (yyval) = new Compiler::Double((yyvsp[0]), new Compiler::Unchanged("0")); }
 #line 1528 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 40:
-#line 74 "Grammar.y" /* yacc.c:1646  */
+#line 74 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name + name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1534 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 41:
-#line 75 "Grammar.y" /* yacc.c:1646  */
+#line 75 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name + number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1540 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 42:
-#line 76 "Grammar.y" /* yacc.c:1646  */
+#line 76 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number + name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1546 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 43:
-#line 77 "Grammar.y" /* yacc.c:1646  */
+#line 77 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number + number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1552 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 44:
-#line 78 "Grammar.y" /* yacc.c:1646  */
+#line 78 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name + expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1558 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 45:
-#line 79 "Grammar.y" /* yacc.c:1646  */
+#line 79 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number + expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1564 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 46:
-#line 80 "Grammar.y" /* yacc.c:1646  */
+#line 80 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression + name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1570 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 47:
-#line 81 "Grammar.y" /* yacc.c:1646  */
+#line 81 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression + number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1576 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 48:
-#line 82 "Grammar.y" /* yacc.c:1646  */
+#line 82 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression + expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1582 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 49:
-#line 85 "Grammar.y" /* yacc.c:1646  */
+#line 85 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name - name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1588 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 50:
-#line 86 "Grammar.y" /* yacc.c:1646  */
+#line 86 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name - number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1594 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 51:
-#line 87 "Grammar.y" /* yacc.c:1646  */
+#line 87 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number - name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1600 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 52:
-#line 88 "Grammar.y" /* yacc.c:1646  */
+#line 88 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number - number" <<std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1606 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 53:
-#line 89 "Grammar.y" /* yacc.c:1646  */
+#line 89 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name - expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1612 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 54:
-#line 90 "Grammar.y" /* yacc.c:1646  */
+#line 90 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number - expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1618 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 55:
-#line 91 "Grammar.y" /* yacc.c:1646  */
+#line 91 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression - name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1624 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 56:
-#line 92 "Grammar.y" /* yacc.c:1646  */
+#line 92 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression - number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1630 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 57:
-#line 93 "Grammar.y" /* yacc.c:1646  */
+#line 93 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression - expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1636 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 58:
-#line 96 "Grammar.y" /* yacc.c:1646  */
+#line 96 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name * name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1642 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 59:
-#line 97 "Grammar.y" /* yacc.c:1646  */
+#line 97 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name * number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1648 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 60:
-#line 98 "Grammar.y" /* yacc.c:1646  */
+#line 98 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number * name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1654 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 61:
-#line 99 "Grammar.y" /* yacc.c:1646  */
+#line 99 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number * number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1660 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 62:
-#line 100 "Grammar.y" /* yacc.c:1646  */
+#line 100 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name * expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1666 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 63:
-#line 101 "Grammar.y" /* yacc.c:1646  */
+#line 101 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number * expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1672 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 64:
-#line 102 "Grammar.y" /* yacc.c:1646  */
+#line 102 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression * name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1678 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 65:
-#line 103 "Grammar.y" /* yacc.c:1646  */
+#line 103 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression * number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1684 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 66:
-#line 104 "Grammar.y" /* yacc.c:1646  */
+#line 104 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression * expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1690 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 67:
-#line 107 "Grammar.y" /* yacc.c:1646  */
+#line 107 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name / name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1696 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 68:
-#line 108 "Grammar.y" /* yacc.c:1646  */
+#line 108 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name / number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1702 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 69:
-#line 109 "Grammar.y" /* yacc.c:1646  */
+#line 109 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number / name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1708 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 70:
-#line 110 "Grammar.y" /* yacc.c:1646  */
+#line 110 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number / number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1714 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 71:
-#line 111 "Grammar.y" /* yacc.c:1646  */
+#line 111 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name / expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1720 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 72:
-#line 112 "Grammar.y" /* yacc.c:1646  */
+#line 112 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number / expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1726 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 73:
-#line 113 "Grammar.y" /* yacc.c:1646  */
+#line 113 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression / name" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1732 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 74:
-#line 114 "Grammar.y" /* yacc.c:1646  */
+#line 114 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression / number" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1738 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 75:
-#line 115 "Grammar.y" /* yacc.c:1646  */
+#line 115 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression / expression" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1744 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 76:
-#line 118 "Grammar.y" /* yacc.c:1646  */
+#line 118 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing name in brackets" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1750 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 77:
-#line 119 "Grammar.y" /* yacc.c:1646  */
+#line 119 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing number in brackets" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1756 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 78:
-#line 120 "Grammar.y" /* yacc.c:1646  */
+#line 120 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression in brackets" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1762 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 79:
-#line 123 "Grammar.y" /* yacc.c:1646  */
+#line 123 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing assignemnt" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1768 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 80:
-#line 124 "Grammar.y" /* yacc.c:1646  */
+#line 124 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing assignment" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1774 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 81:
-#line 127 "Grammar.y" /* yacc.c:1646  */
+#line 127 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing decassignment" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1780 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 82:
-#line 128 "Grammar.y" /* yacc.c:1646  */
+#line 128 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing decassingment" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1786 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 83:
-#line 129 "Grammar.y" /* yacc.c:1646  */
+#line 129 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing decassignment" << std::endl; (yyval) = new Compiler::Triple((yyvsp[-2]), (yyvsp[-1]), (yyvsp[0])); }
 #line 1792 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 84:
-#line 132 "Grammar.y" /* yacc.c:1646  */
+#line 132 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing declaration" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1798 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 85:
-#line 134 "Grammar.y" /* yacc.c:1646  */
+#line 134 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing variable output" << std::endl; (yyval) = new Compiler::Double((yyvsp[-1]), (yyvsp[0])); }
 #line 1804 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 86:
-#line 136 "Grammar.y" /* yacc.c:1646  */
+#line 136 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing a name'"<< std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1810 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 87:
-#line 138 "Grammar.y" /* yacc.c:1646  */
+#line 138 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing variable type" << std::endl; (yyval) = new Compiler::Changed(yytext); }
 #line 1816 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 88:
-#line 140 "Grammar.y" /* yacc.c:1646  */
-    { if(PDEBUG == true)std::cout << "[DEBUG] Parsing semi colon" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
+#line 140 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
+    { if(PDEBUG == true)std::cout << "[DEBUG] Parsing semi colon" << std::endl; (yyval) = new Compiler::Changed(yytext); }
 #line 1822 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 89:
-#line 142 "Grammar.y" /* yacc.c:1646  */
+#line 142 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing hardcoded value" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1828 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 90:
-#line 144 "Grammar.y" /* yacc.c:1646  */
+#line 144 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing done statement" << std::endl; (yyval) = new Compiler::Changed(yytext); }
 #line 1834 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 91:
-#line 146 "Grammar.y" /* yacc.c:1646  */
+#line 146 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing addition symbol" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1840 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 92:
-#line 148 "Grammar.y" /* yacc.c:1646  */
+#line 148 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing subtraction symbol" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1846 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 93:
-#line 150 "Grammar.y" /* yacc.c:1646  */
+#line 150 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing multiplication symbol" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1852 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 94:
-#line 152 "Grammar.y" /* yacc.c:1646  */
+#line 152 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing division symbol" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1858 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 95:
-#line 154 "Grammar.y" /* yacc.c:1646  */
+#line 154 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing equals symbol" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1864 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 96:
-#line 156 "Grammar.y" /* yacc.c:1646  */
+#line 156 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing left bracket" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1870 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 97:
-#line 158 "Grammar.y" /* yacc.c:1646  */
+#line 158 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing right bracket" << std::endl; (yyval) = new Compiler::Unchanged(yytext); }
 #line 1876 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 98:
-#line 160 "Grammar.y" /* yacc.c:1646  */
+#line 160 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing say statement" << std::endl; (yyval) = new Compiler::Changed(yytext); }
 #line 1882 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 99:
-#line 162 "Grammar.y" /* yacc.c:1646  */
+#line 162 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing addfunc expression" << std::endl; (yyval) = new Compiler::Single((yyvsp[0])); }
 #line 1888 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 100:
-#line 163 "Grammar.y" /* yacc.c:1646  */
+#line 163 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing subfunc Single" << std::endl; (yyval) = new Compiler::Single((yyvsp[0])); }
 #line 1894 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 101:
-#line 164 "Grammar.y" /* yacc.c:1646  */
+#line 164 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing mulfunc Single" << std::endl; (yyval) = new Compiler::Single((yyvsp[0])); }
 #line 1900 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 102:
-#line 165 "Grammar.y" /* yacc.c:1646  */
+#line 165 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing divfunc Single" << std::endl; (yyval) = new Compiler::Single((yyvsp[0])); }
 #line 1906 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 103:
-#line 166 "Grammar.y" /* yacc.c:1646  */
+#line 166 "Scanner and Parser/Grammar.y" /* yacc.c:1646  */
     { if(PDEBUG == true)std::cout << "[DEBUG] Parsing bracketed Single" << std::endl; (yyval) = new Compiler::Single((yyvsp[0])); }
 #line 1912 "y.tab.c" /* yacc.c:1646  */
     break;
@@ -2140,7 +2140,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 168 "Grammar.y" /* yacc.c:1906  */
+#line 168 "Scanner and Parser/Grammar.y" /* yacc.c:1906  */
 
 void yyerror(char const *s)
 {
