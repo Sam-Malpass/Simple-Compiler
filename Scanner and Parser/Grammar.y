@@ -114,3 +114,8 @@ divfunc:
 	| expression div hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression / number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	| expression div expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression / expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	;
+bracketed:
+	lbracket name rbracket									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name in brackets" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| lbracket hardcoded rbracket							{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number in brackets" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| lbracket expression rbracket							{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression in brackets" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	;
