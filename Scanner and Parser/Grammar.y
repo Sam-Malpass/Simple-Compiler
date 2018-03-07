@@ -44,8 +44,8 @@ statement:
 	| expression stateend									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression" << std::endl; $$ = new Compiler::Double($1, $2); }
 	| output stateend										{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing output" << std::endl; $$ = new Compiler::Double($1, $2); }
 	| wrong													{ std::cout << "[WARNING] SYNTAX ERROR REMOVED" << std::endl; $$ = new Compiler::Double(new Compiler::Empty(), new Compiler::Empty()); }
-	| return												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::StateEnd(";")); }
-	| output												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::StateEnd(";")); }
+	| return												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::Unchanged(";")); }
+	| output												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::Unchanged(";")); }
 	;
 wrong:
 	name stateend
