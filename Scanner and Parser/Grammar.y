@@ -142,3 +142,5 @@ hardcoded:
 	HCNUMBER												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing hardcoded value" << std::endl; $$ = new Compiler::Unchanged(yytext); }
 fin:
 	DONE													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done statement" << std::endl; $$ = new Compiler::Changed(yytext); }
+add:
+	ADD														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing addition symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
