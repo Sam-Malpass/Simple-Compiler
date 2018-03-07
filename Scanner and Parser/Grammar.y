@@ -148,3 +148,5 @@ sub:
 	SUB														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing subtraction symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
 mul:
 	MUL														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing multiplication symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
+div:
+	DIV														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing division symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
