@@ -154,3 +154,5 @@ eqs:
 	EQS														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing equals symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
 lbracket:
 	LEFT_BRACKET											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing left bracket" << std::endl; $$ = new Compiler::Unchanged(yytext); }
+rbracket:
+	RIGHT_BRACKET											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing right bracket" << std::endl; $$ = new Compiler::Unchanged(yytext); }
