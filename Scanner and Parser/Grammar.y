@@ -12,3 +12,8 @@ void yyerror(char const *);
 bool PDEBUG = false;
 %}
 %define api.value.type {Compiler::SyntaxTree *}
+%token START LEFT_BRACE RIGHT_BRACE
+%token NUMBER NAME HCNUMBER SENTENCE
+%token ADD SUB MUL DIV EQS LEFT_BRACKET RIGHT_BRACKET
+%token DONE SAY
+%token SEMI_COLON
