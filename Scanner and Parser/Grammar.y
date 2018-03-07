@@ -150,3 +150,5 @@ mul:
 	MUL														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing multiplication symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
 div:
 	DIV														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing division symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
+eqs:
+	EQS														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing equals symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
