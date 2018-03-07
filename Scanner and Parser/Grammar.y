@@ -68,5 +68,16 @@ return:
 	fin hardcoded											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with number" << std::endl; $$ = new Compiler::Double($1, $2); }
 	| fin name												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with variable" << std::endl; $$ = new Compiler::Double($1, $2); }
 	| fin expression										{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with expression" << std::endl; $$ = new Compiler::Double($1, $2); }
-	| fin													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done alone" << std::endl; $$ = new Compiler::Double($1, new Compiler::NameNumber("0")); }
-	;					
+	| fin													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done alone" << std::endl; $$ = new Compiler::Double($1, new Compiler::Unchanged("0")); }
+	;
+addfunc:
+	name add name											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name + name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }			
+	| name add hardcoded									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name + number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }							
+	| hardcoded add name									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number + name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }	
+	| hardcoded add hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number + number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| name add expression									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name + expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| hardcoded add expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number + expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression add name									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression + name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression add hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression + number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression add expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression + expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	;	
