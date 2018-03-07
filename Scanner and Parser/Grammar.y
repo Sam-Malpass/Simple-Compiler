@@ -64,3 +64,9 @@ wrong:
 	| say hardcoded stateend
 	| say expression stateend
 	;
+return:
+	fin hardcoded											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with number" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| fin name												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with variable" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| fin expression										{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done with expression" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| fin													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done alone" << std::endl; $$ = new Compiler::Double($1, new Compiler::NameNumber("0")); }
+	;					
