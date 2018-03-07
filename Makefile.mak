@@ -8,3 +8,6 @@ Grammar:
 Lex:
 	flex Scanner\ and\ Parser/Lex.l
 	mv lex.yy.c Scanner\ and\ Parser
+Run:
+	$(MAKE) all
+	./Executable/Compiler.exe < Test\ Code/Test\ Program 
