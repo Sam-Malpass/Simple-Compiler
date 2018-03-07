@@ -44,8 +44,8 @@ statement:
 	| expression stateend									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression" << std::endl; $$ = new Compiler::Double($1, $2); }
 	| output stateend										{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing output" << std::endl; $$ = new Compiler::Double($1, $2); }
 	| wrong													{ std::cout << "[WARNING] SYNTAX ERROR REMOVED" << std::endl; $$ = new Compiler::Double(new Compiler::Empty(), new Compiler::Empty()); }
-	| return												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::Unchanged(";")); }
-	| output												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::Unchanged(";")); }
+	| return												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::Changed(";")); }
+	| output												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::Changed(";")); }
 	;
 wrong:
 	name stateend
@@ -137,7 +137,7 @@ name:
 type:
 	NUMBER													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing variable type" << std::endl; $$ = new Compiler::Changed(yytext); }
 stateend:
-	SEMI_COLON												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing semi colon" << std::endl; $$ = new Compiler::Unchanged(yytext); }
+	SEMI_COLON												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing semi colon" << std::endl; $$ = new Compiler::Changed(yytext); }
 hardcoded:
 	HCNUMBER												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing hardcoded value" << std::endl; $$ = new Compiler::Unchanged(yytext); }
 fin:
