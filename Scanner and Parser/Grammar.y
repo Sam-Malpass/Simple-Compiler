@@ -21,3 +21,10 @@ bool PDEBUG = false;
 %%
 input:
 	function function_list			{ root.reset(new Compiler::Double($1, $2)); }
+function:
+	START LEFT_BRACE statements RIGHT_BRACE { if(PDEBUG == true)std::cout << "[DEBUG] Parsing function" << std::endl; $$ = new Compiler::Double($1, $3); }
+	| START statements RIGHT_BRACE	{ $$ = new Compiler::Double($1, $2); }
+	| START LEFT_BRACE statements	{ $$ = new Compiler::Double($1, $3); }
+	| START statements		{ $$ = new Compiler::Double($1, $2); }
+	| statements			{ $$ = new Compiler::Double($1, new Compiler::Empty()); }
+	;
