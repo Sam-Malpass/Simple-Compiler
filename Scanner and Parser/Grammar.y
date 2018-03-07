@@ -128,3 +128,5 @@ decassignment:
 	| declaration eqs name									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing decassingment" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	| declaration eqs expression							{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing decassignment" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	;
+declaration:
+	type name												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing declaration" << std::endl; $$ = new Compiler::Double($1, $2); }
