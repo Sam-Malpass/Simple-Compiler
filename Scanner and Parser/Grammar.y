@@ -17,3 +17,4 @@ bool PDEBUG = false;
 %token ADD SUB MUL DIV EQS LEFT_BRACKET RIGHT_BRACKET
 %token DONE SAY
 %token SEMI_COLON
+%start input
