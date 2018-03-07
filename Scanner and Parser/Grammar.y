@@ -130,3 +130,5 @@ decassignment:
 	;
 declaration:
 	type name												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing declaration" << std::endl; $$ = new Compiler::Double($1, $2); }
+output:
+	say name												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing variable output" << std::endl; $$ = new Compiler::Double($1, $2); }
