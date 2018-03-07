@@ -81,3 +81,14 @@ addfunc:
 	| expression add hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression + number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	| expression add expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression + expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	;	
+subfunc:
+	name sub name											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name - name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| name sub hardcoded									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name - number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| hardcoded sub name									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number - name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| hardcoded sub hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number - number" <<std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| name sub expression									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name - expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| hardcoded sub expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number - expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression sub name									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression - name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression sub hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression - number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression sub expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression - expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	;
