@@ -47,3 +47,20 @@ statement:
 	| return												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::StateEnd(";")); }
 	| output												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::StateEnd(";")); }
 	;
+wrong:
+	name stateend
+	| name
+	| expression
+	| hardcoded stateend
+	| hardcoded
+	| type hardcoded
+	| type name
+	| type hardcoded stateend
+	| assignment
+	| decassignment
+	| declaration
+	| say hardcoded
+	| say expression
+	| say hardcoded stateend
+	| say expression stateend
+	;
