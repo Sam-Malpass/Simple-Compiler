@@ -32,3 +32,7 @@ function:
 	| START statements										{ $$ = new Compiler::Double($1, $2); }
 	| statements											{ $$ = new Compiler::Double($1, new Compiler::Empty()); }
 	;
+statements:
+	statements statement									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing statement" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| %empty												{ $$ = nullptr; }
+	;
