@@ -123,3 +123,8 @@ assignment:
 	name eqs hardcoded										{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing assignemnt" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	| name eqs expression									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing assignment" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	;	
+decassignment:
+	declaration eqs hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing decassignment" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| declaration eqs name									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing decassingment" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| declaration eqs expression							{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing decassignment" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	;
