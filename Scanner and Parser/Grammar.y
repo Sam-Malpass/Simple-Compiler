@@ -166,3 +166,8 @@ expression:
 	| bracketed												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing bracketed Single" << std::endl; $$ = new Compiler::Single($1); }
 	;
 %%
+void yyerror(char const *s)
+{
+	std::cout << "Error found: " << s << std::endl;
+	exit(1);
+}
