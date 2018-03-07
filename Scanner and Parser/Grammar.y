@@ -152,3 +152,5 @@ div:
 	DIV														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing division symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
 eqs:
 	EQS														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing equals symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
+lbracket:
+	LEFT_BRACKET											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing left bracket" << std::endl; $$ = new Compiler::Unchanged(yytext); }
