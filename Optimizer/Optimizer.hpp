@@ -16,3 +16,36 @@ bool is_end(const string &str)
 {
 	return str.find_first_of(";") == string::npos;
 }
+int preOp()
+{
+	cout << "Performing Preliminary Optimization Check" << endl;
+	string scode;
+	string test;
+	ifstream file("Compiled Code/Main.cpp");
+	stringstream input;
+	input << file.rdbuf();
+	scode = input.str();
+	file.close();
+	istringstream iss(scode);
+	vector<string> result (istream_iterator<string>{iss}, istream_iterator<string>{});
+	for(int i = 0; i < result.size(); i++)
+	{
+		test = "";
+		if(result[i] == "return")
+		{
+			i++;
+			while(result[i] != "}")
+			{
+				test += result[i];
+				if(is_digits(test) == false)
+				{
+					return 0;
+				}
+				i++;
+			}
+			stringstream geek(test);
+			geek >> returnVal;
+		}
+	}
+	return 1;
+}
