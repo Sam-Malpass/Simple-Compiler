@@ -49,3 +49,42 @@ int preOp()
 	}
 	return 1;
 }
+int secondOp()
+{
+	cout << "Performing Secondary Optimization Check" << endl;
+	ifstream file("Compiled Code/Main.cpp");
+	string scode;
+	stringstream input;
+	input << file.rdbuf();
+	scode = input.str();
+	file.close();
+	bool change = false;
+	string test = "";
+	istringstream iss(scode);
+	optimized = "";
+	vector<string> result (istream_iterator<string>{iss}, istream_iterator<string>{});
+	int i = 16;
+	while(i < result.size())
+	{
+		if(is_digits(result[i]) == true)
+		{
+			i++;
+		}
+		test += result[i] + " ";
+		if(is_end(test) == false)
+		{
+			optimized += test + "\n";
+			test = "";
+		}
+		else
+		{
+			change = true;
+		}
+		i++;
+	}
+	if(change == true)
+	{
+		return 1;
+	}
+	return 0;
+}
