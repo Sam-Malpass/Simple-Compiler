@@ -36,3 +36,14 @@ statements:
 	statements statement									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing statement" << std::endl; $$ = new Compiler::Double($1, $2); }
 	| %empty												{ $$ = nullptr; }
 	;
+statement:
+	return stateend											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing 'DONE'" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| declaration stateend									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing declaration" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| decassignment stateend								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing declartion & assignment" << std::endl; $$ = new Compiler::Double($1, $2);}
+	| assignment stateend									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing assignment" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| expression stateend									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| output stateend										{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing output" << std::endl; $$ = new Compiler::Double($1, $2); }
+	| wrong													{ std::cout << "[WARNING] SYNTAX ERROR REMOVED" << std::endl; $$ = new Compiler::Double(new Compiler::Empty(), new Compiler::Empty()); }
+	| return												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::StateEnd(";")); }
+	| output												{ std::cout << "[WARNING] FIXING BROKEN CODE" << std::endl; $$ = new Compiler::Double($1, new Compiler::StateEnd(";")); }
+	;
