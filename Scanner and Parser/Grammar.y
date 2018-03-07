@@ -92,3 +92,14 @@ subfunc:
 	| expression sub hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression - number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	| expression sub expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression - expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
 	;
+mulfunc:
+	name mul name											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name * name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| name mul hardcoded									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name * number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| hardcoded mul name									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number * name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| hardcoded mul hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number * number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| name mul expression									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing name * expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| hardcoded mul expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing number * expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression mul name									{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression * name" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression mul hardcoded								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression * number" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	| expression mul expression								{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing expression * expression" << std::endl; $$ = new Compiler::Triple($1, $2, $3); }
+	;
