@@ -144,3 +144,5 @@ fin:
 	DONE													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done statement" << std::endl; $$ = new Compiler::Changed(yytext); }
 add:
 	ADD														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing addition symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
+sub:
+	SUB														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing subtraction symbol" << std::endl; $$ = new Compiler::Unchanged(yytext); }
