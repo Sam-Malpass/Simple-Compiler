@@ -18,3 +18,6 @@ bool PDEBUG = false;
 %token DONE SAY
 %token SEMI_COLON
 %start input
+%%
+input:
+	function function_list			{ root.reset(new Compiler::Double($1, $2)); }
