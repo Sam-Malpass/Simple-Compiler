@@ -1,0 +1,8 @@
+start
+{
+	number a = 3;
+	number b = 4;
+	number c = a + b;
+	say c;
+	done c;
+}
