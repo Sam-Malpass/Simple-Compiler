@@ -134,3 +134,7 @@ output:
 	say name												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing variable output" << std::endl; $$ = new Compiler::Double($1, $2); }
 name:
 	NAME													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing a name'"<< std::endl; $$ = new Compiler::Unchanged(yytext); }
+type:
+	NUMBER													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing variable type" << std::endl; $$ = new Compiler::Changed(yytext); }
+stateend:
+	SEMI_COLON												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing semi colon" << std::endl; $$ = new Compiler::Unchanged(yytext); }
