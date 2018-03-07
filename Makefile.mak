@@ -5,3 +5,6 @@ all:
 Grammar:
 	yacc -d Scanner\ and\ Parser/Grammar.y
 	mv y.tab.* Scanner\ and\ Parser
+Lex:
+	flex Scanner\ and\ Parser/Lex.l
+	mv lex.yy.c Scanner\ and\ Parser
