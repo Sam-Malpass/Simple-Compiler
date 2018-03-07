@@ -138,3 +138,5 @@ type:
 	NUMBER													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing variable type" << std::endl; $$ = new Compiler::Changed(yytext); }
 stateend:
 	SEMI_COLON												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing semi colon" << std::endl; $$ = new Compiler::Unchanged(yytext); }
+hardcoded:
+	HCNUMBER												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing hardcoded value" << std::endl; $$ = new Compiler::Unchanged(yytext); }
