@@ -158,3 +158,11 @@ rbracket:
 	RIGHT_BRACKET											{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing right bracket" << std::endl; $$ = new Compiler::Unchanged(yytext); }
 say:
 	SAY														{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing say statement" << std::endl; $$ = new Compiler::Changed(yytext); }
+expression:
+	addfunc													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing addfunc expression" << std::endl; $$ = new Compiler::Single($1); }	 
+	| subfunc												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing subfunc Single" << std::endl; $$ = new Compiler::Single($1); }
+	| mulfunc												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing mulfunc Single" << std::endl; $$ = new Compiler::Single($1); }
+	| divfunc												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing divfunc Single" << std::endl; $$ = new Compiler::Single($1); }
+	| bracketed												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing bracketed Single" << std::endl; $$ = new Compiler::Single($1); }
+	;
+%%
