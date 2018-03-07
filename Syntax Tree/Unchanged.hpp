@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include "Syntax Tree.hpp"
-Unchangedspace Compiler
+namespace Compiler
 {
 	class Unchanged : public SyntaxTree
 	{
