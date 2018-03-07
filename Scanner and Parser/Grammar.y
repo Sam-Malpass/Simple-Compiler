@@ -140,3 +140,5 @@ stateend:
 	SEMI_COLON												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing semi colon" << std::endl; $$ = new Compiler::Unchanged(yytext); }
 hardcoded:
 	HCNUMBER												{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing hardcoded value" << std::endl; $$ = new Compiler::Unchanged(yytext); }
+fin:
+	DONE													{ if(PDEBUG == true)std::cout << "[DEBUG] Parsing done statement" << std::endl; $$ = new Compiler::Changed(yytext); }
