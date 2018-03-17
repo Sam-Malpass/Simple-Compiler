@@ -71,6 +71,11 @@ int secondOp()
 			i++;
 		}
 		test += result[i] + " ";
+		if(test == "return ")
+		{
+			i++;
+			optimized += test + result[i];
+		}
 		if(is_end(test) == false)
 		{
 			optimized += test + "\n";
